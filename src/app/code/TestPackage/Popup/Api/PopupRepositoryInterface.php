@@ -1,0 +1,23 @@
+<?php declare(strict_types=1);
+
+namespace TestPackage\Popup\Api;
+
+use TestPackage\Popup\Api\Data\PopupInterface;
+
+interface PopupRepositoryInterface
+{
+    /**
+     * @param PopupInterface $popup
+     * @return void
+     */
+    public function save(PopupInterface $popup): void;
+    
+    public function delete(PopupInterface $popup): void;
+    
+    public function getById(int $popupId): PopupInterface;
+
+    
+
+
+
+    }

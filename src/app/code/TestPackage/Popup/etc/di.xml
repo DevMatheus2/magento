@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="TestPackage\Popup\Api\PopupRepositoryInterface"  type="TestPackage\Popup\Service\PopupRepository" />
+    
+    
+    
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="testpackage_popup_listing_data_source" xsi:type="string">TestPackage\Popup\Model\ResourceModel\Popup\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="TestPackage\Popup\Model\ResourceModel\Popup\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">testpackage_popup</argument>
+            <argument name="eventPrefix" xsi:type="string">testpackage_popup_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">popup_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">TestPackage\Popup\Model\ResourceModel\Popup</argument>
+        </arguments>
+    </type>
+</config>
+
+
