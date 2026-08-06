@@ -8,6 +8,7 @@ use Magento\Framework\Controller\ResultFactory;
 
 class Index extends Action
 {
+    const ADMIN_RESOURCE = 'TestPackage_Popup::popup';
     public function execute() : ResultInterface
     {
         /** @var Page $page */

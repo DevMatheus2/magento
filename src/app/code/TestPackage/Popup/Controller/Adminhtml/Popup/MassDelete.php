@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Testpackage\Popup\Controller\Adminhtml\Popup;
+namespace TestPackage\Popup\Controller\Adminhtml\Popup;
 
 use TestPackage\Popup\Model\ResourceModel\Popup\CollectionFactory;
 use TestPackage\Popup\Api\Data\PopupInterface;
@@ -14,6 +14,7 @@ use Magento\Ui\Component\MassAction\Filter;
 
 class MassDelete extends Action
 {
+    const ADMIN_RESOURCE = 'TestPackage_Popup::popup';
     public function __construct(
         Context $context,
         private readonly Filter $filter,

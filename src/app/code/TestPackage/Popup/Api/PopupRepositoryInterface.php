@@ -14,6 +14,14 @@ interface PopupRepositoryInterface
     
     public function delete(PopupInterface $popup): void;
     
+
+    /**
+     * Undocumented function
+     *
+     * @param integer $popupId
+     * @return PopupInterface
+     * @throws NoSuchEntityException
+     */
     public function getById(int $popupId): PopupInterface;
 
     

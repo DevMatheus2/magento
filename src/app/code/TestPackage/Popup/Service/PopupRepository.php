@@ -6,6 +6,7 @@ use TestPackage\Popup\Api\Data\PopupInterface;
 use TestPackage\Popup\Api\PopupRepositoryInterface;
 use TestPackage\Popup\Model\PopupFactory;
 use TestPackage\Popup\Model\ResourceModel\Popup as PopupResource;
+use Magento\Framework\Exception\NoSuchEntityException;
 
 class PopupRepository implements PopupRepositoryInterface
 {
@@ -56,8 +57,10 @@ class PopupRepository implements PopupRepositoryInterface
         $this->resource->load($popup, $id);
         if(!$popup->getId()) {
             throw new NoSuchEntityException(
-            __("Popup id '%1' doesn't exist"),
-            $id
+            __(
+                "Popup id '%1' doesn't exist",
+                $id
+            )
             );
         }
         return $popup;
